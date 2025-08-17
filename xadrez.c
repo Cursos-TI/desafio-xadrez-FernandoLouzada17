@@ -6,6 +6,8 @@ int main() {
     const int casasTorre = 5;
     const int casasBispo = 5;
     const int casasRainha = 8;
+    const int casasCavaloVertical = 2;
+    const int casasCavaloHorizontal = 1;
 
     // --- Simulação do Movimento da Torre (usando for) ---
     printf("--- Movimento da Torre ---\n");
@@ -36,6 +38,22 @@ int main() {
         } while (contadorRainha > 0);
     }
     printf("\n");
-    
+
+    // --- Simulação do Movimento do Cavalo (usando for aninhado com while) ---
+    printf("--- Movimento do Cavalo ---\n");
+    // O cavalo se move duas casas para baixo e uma para a esquerda.
+    // Loop externo 'for' para controlar o movimento vertical
+    for (int i = 0; i < casasCavaloVertical; i++) {
+        printf("Baixo\n");
+    }
+
+    // Loop 'while' para controlar o movimento horizontal
+    int contadorHorizontal = 0;
+    while (contadorHorizontal < casasCavaloHorizontal) {
+        printf("Esquerda\n");
+        contadorHorizontal++;
+    }
+    printf("\n");
+
     return 0;
 }
